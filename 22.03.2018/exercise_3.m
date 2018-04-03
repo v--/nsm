@@ -1,4 +1,4 @@
-% Plot sin(x) in red, cos(x) in green and y = 0 in black with a legend
+% Plot sin(x) in red, cos(x) in green and y = 0 in black with a legend.
 
 x = linspace(-2 * pi, 2 * pi, 100);
 

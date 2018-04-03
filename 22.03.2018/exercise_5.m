@@ -1,4 +1,4 @@
-% Align four plots in a 2x2 grid
+% Align four plots in a 2x2 grid.
 
 x = linspace(-2 * pi, 2 * pi, 100);
 

@@ -1,4 +1,4 @@
-% This is yet another exercise on Matlab itself, no stochastics here yet
+% This is yet another exercise on Matlab itself, no stochastics here yet.
 function[s] = heron(a, b, c)
     if !(a > 0 & b > 0 & c > 0)
         error 'The sides of a triangle must be positive'
