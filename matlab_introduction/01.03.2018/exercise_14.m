@@ -9,7 +9,7 @@
 C = [11:14; 21:24; 31:34; 41:44];
 
 %!test
-%! source 01.03.2018/exercise_14.m;
+%! source matlab_introduction/01.03.2018/exercise_14.m;
 %!
 %! assert(
 %!   C,
@@ -24,7 +24,7 @@ C = [11:14; 21:24; 31:34; 41:44];
 d = diag(C);
 
 %!test
-%! source 01.03.2018/exercise_14.m;
+%! source matlab_introduction/01.03.2018/exercise_14.m;
 %!
 %! assert(
 %!   d,
@@ -34,7 +34,7 @@ d = diag(C);
 x = diag(C, 2);
 
 %!test
-%! source 01.03.2018/exercise_14.m;
+%! source matlab_introduction/01.03.2018/exercise_14.m;
 %!
 %! assert(
 %!   x,
@@ -44,7 +44,7 @@ x = diag(C, 2);
 y = diag(C, -3);
 
 %!test
-%! source 01.03.2018/exercise_14.m;
+%! source matlab_introduction/01.03.2018/exercise_14.m;
 %!
 %! assert(
 %!   y,

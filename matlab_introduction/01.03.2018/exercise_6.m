@@ -3,7 +3,7 @@
 M = eye(3);
 
 %!test
-%! source 01.03.2018/exercise_6.m;
+%! source matlab_introduction/01.03.2018/exercise_6.m;
 %!
 %! assert(
 %!   M,

@@ -3,7 +3,7 @@
 x = 0:0.2:1;
 
 %!test
-%! source 01.03.2018/exercise_8.m;
+%! source matlab_introduction/01.03.2018/exercise_8.m;
 %!
 %! assert(
 %!   0:0.2:1,

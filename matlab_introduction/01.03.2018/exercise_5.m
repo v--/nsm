@@ -3,7 +3,7 @@
 M = zeros(3);
 
 %!test
-%! source 01.03.2018/exercise_5.m;
+%! source matlab_introduction/01.03.2018/exercise_5.m;
 %!
 %! assert(
 %!   M,

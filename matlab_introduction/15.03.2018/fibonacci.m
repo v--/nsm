@@ -1,4 +1,3 @@
-% This is yet another exercise on Matlab itself, no stochastics here yet.
 % This is the Fibonacci function, not the Fibonacci generator.
 function[result] = fib_sequence_iter(n)
     result = [0, 1];
@@ -9,7 +8,7 @@ function[result] = fib_sequence_iter(n)
 end
 
 %!test
-%! source 15.03.2018/fibonacci.m;
+%! source matlab_introduction/15.03.2018/fibonacci.m;
 %! assert(fib_sequence_iter(10), [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
 
 function[result] = fib_sequence_rec(n)

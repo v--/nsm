@@ -1,7 +1,4 @@
-% This is yet another exercise on Matlab itself, no stochastics here yet
-% This is the Fibonacci function, not the Fibonacci generator.
-
-source 15.03.2018/fibonacci.m;
+source matlab_introduction/15.03.2018/fibonacci.m;
 
 % Benchmark the basic Gaussian algorithm with and without pivoting
 function[measurings] = benchmark_fibonacci(n)
@@ -17,7 +14,7 @@ function[measurings] = benchmark_fibonacci(n)
 end
 
 %!test
-%! source 15.03.2018/benchmark_fibonacci.m;
+%! source matlab_introduction/15.03.2018/benchmark_fibonacci.m;
 %!
 %! measurings = benchmark_fibonacci(100);
 %! % Verify that each next algorithm is slower than the preceding one

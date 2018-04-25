@@ -8,7 +8,7 @@ n = 13;
 K = -10 * eye(n) + diag(2 * ones(1, n-1), 1) + diag(ones(1, n-1), -1);
 
 %!test
-%! source 01.03.2018/exercise_15.m;
+%! source matlab_introduction/01.03.2018/exercise_15.m;
 %!
 %! assert(
 %!   K,

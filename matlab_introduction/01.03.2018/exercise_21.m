@@ -19,7 +19,7 @@ b = [-10; 32; -16];
 x = A \ b;
 
 %!test
-%! source 01.03.2018/exercise_21.m;
+%! source matlab_introduction/01.03.2018/exercise_21.m;
 %!
 %! assert(
 %!   x,
@@ -32,7 +32,7 @@ d = [0; 1; 1];
 y = inv(C) * d;
 
 %!test
-%! source 01.03.2018/exercise_21.m;
+%! source matlab_introduction/01.03.2018/exercise_21.m;
 %!
 %! assert(
 %!   y,

@@ -28,14 +28,14 @@ B = [1 2 1; 2 1 2; 2 2 1];
 M1 = inv(inv(A));
 
 %!test
-%! source 01.03.2018/exercise_19.m;
+%! source matlab_introduction/01.03.2018/exercise_19.m;
 %!
 %! assert(M1, A, 1e-10);
 
 M2 = inv(A * B);
 
 %!test
-%! source 01.03.2018/exercise_19.m;
+%! source matlab_introduction/01.03.2018/exercise_19.m;
 %!
 %! assert(
 %!   any(M2 != inv(A .* B))
@@ -49,7 +49,7 @@ M3 = transpose(inv(A));
 M4 = det(A * B);
 
 %!test
-%! source 01.03.2018/exercise_19.m;
+%! source matlab_introduction/01.03.2018/exercise_19.m;
 %!
 %! assert(
 %!   M4,
@@ -60,7 +60,7 @@ M4 = det(A * B);
 M5 = det(inv(A));
 
 %!test
-%! source 01.03.2018/exercise_19.m;
+%! source matlab_introduction/01.03.2018/exercise_19.m;
 %!
 %! assert(
 %!   M5,

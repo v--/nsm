@@ -7,7 +7,7 @@
 P = tril(ones(4)) + triu(-ones(4), 3);
 
 %!test
-%! source 01.03.2018/exercise_17.m;
+%! source matlab_introduction/01.03.2018/exercise_17.m;
 %!
 %! assert(
 %!   P,

@@ -3,7 +3,7 @@
 M = ones(4);
 
 %!test
-%! source 01.03.2018/exercise_3.m;
+%! source matlab_introduction/01.03.2018/exercise_3.m;
 %!
 %! assert(
 %!   M,

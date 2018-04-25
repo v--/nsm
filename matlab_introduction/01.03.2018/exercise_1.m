@@ -11,13 +11,13 @@ A = [1 8 3; 3 10 7; 5 6 9];
 x = A(3, 3);
 
 %!test
-%! source 01.03.2018/exercise_1.m;
+%! source matlab_introduction/01.03.2018/exercise_1.m;
 %! assert(x, 9);
 
 first_col = A(:, 1);
 
 %!test
-%! source 01.03.2018/exercise_1.m;
+%! source matlab_introduction/01.03.2018/exercise_1.m;
 %!
 %! assert(
 %!   first_col,

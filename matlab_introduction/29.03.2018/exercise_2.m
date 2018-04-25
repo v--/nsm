@@ -5,7 +5,7 @@ x = 100 + 5 * randn(1000, 1);
 x_mean = mean(x);
 
 %!test
-%! source 29.03.2018/exercise_2.m;
+%! source matlab_introduction/29.03.2018/exercise_2.m;
 %!
 %! assert(
 %!   x_mean,
@@ -16,7 +16,7 @@ x_mean = mean(x);
 x_median = median(x);
 
 %!test
-%! source 29.03.2018/exercise_2.m;
+%! source matlab_introduction/29.03.2018/exercise_2.m;
 %!
 %! assert(
 %!   x_median,
@@ -27,7 +27,7 @@ x_median = median(x);
 x_sd = std(x);
 
 %!test
-%! source 29.03.2018/exercise_2.m;
+%! source matlab_introduction/29.03.2018/exercise_2.m;
 %!
 %! assert(
 %!   x_sd,
