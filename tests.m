@@ -23,3 +23,9 @@ test matlab_introduction/15.03.2018/fibonacci;
 test matlab_introduction/15.03.2018/benchmark_fibonacci;
 
 test matlab_introduction/29.03.2018/exercise_2;
+
+test pseudorandom_generators/01_elementary;
+test pseudorandom_generators/02_von_neumann;
+test pseudorandom_generators/03_linear_congruential;
+test pseudorandom_generators/04_linear_feedback_shift;
+test pseudorandom_generators/05_lagged_fibonacci;
