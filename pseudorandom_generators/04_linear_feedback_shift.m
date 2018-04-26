@@ -1,5 +1,5 @@
 % Constants
-function[v] = w() v = [127, 8191, 131071]; end % The fourth, fifth and sixth Mersenne primes
+function[v] = w() v = [127; 8191; 131071]; end % The fourth, fifth and sixth Mersenne primes
 
 % Functions
 function[next] = linear_feedback_shift_generator(current)

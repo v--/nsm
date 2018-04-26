@@ -1,13 +1,15 @@
 function[sample] = generate_sample(prgn_next, n, seed)
-    sample = [seed];
+    sample = zeros(n, 1);
+    i = length(seed);
+    sample(1:i) = seed;
 
-    while length(sample) < n
-        i = length(sample);
+    while i < n
         seed_index = i-length(seed)+1:i;
         generated = prgn_next(sample(seed_index));
 
         generated_index = 1:min(n-i, length(generated));
         assignment_index = i+1:min(i+length(generated),n);
         sample(assignment_index) = generated(generated_index);
+        i += length(assignment_index);
     end
 end
