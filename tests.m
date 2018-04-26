@@ -29,3 +29,5 @@ test pseudorandom_generators/02_von_neumann;
 test pseudorandom_generators/03_linear_congruential;
 test pseudorandom_generators/04_linear_feedback_shift;
 test pseudorandom_generators/05_lagged_fibonacci;
+
+test continuous_generators/01_rejection_sampling;
