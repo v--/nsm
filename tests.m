@@ -31,3 +31,5 @@ test pseudorandom_generators/04_linear_feedback_shift;
 test pseudorandom_generators/05_lagged_fibonacci;
 
 test continuous_generators/01_rejection_sampling;
+
+test monte_carlo/01_basic_integration;
