@@ -1,33 +1,36 @@
-% Construct the matrix
-%     /  3    0   -1    0    0    0  \
-%     |  0    3    0   -1    0    0  |
-% D = | -1    0    3    0   -1    0  |
-%     |  0   -1    0    3    0   -1  |
-%     |  0    0   -1    0    3    0  |
-%     \  0    0    0   -1    0    3  /
+% Solve the system Ax = b, where
 %
-% transpose it and find it's inverse.
-
-D = 3 * eye(6) + diag(-ones(1, 4), -2) + diag(-ones(1, 4), 2);
+%     /  4   -2   -10  \
+% A = |  2   10   -12  |
+%     \ -4   -6    16  /
+%
+% b = (-10 32 -16)^T
+%
+% and use another method to solve the system Cx = d, where
+%
+%     /  1   1  -1  \
+% C = |  2   1   1  |
+%     \  1   0   3  /
+%
+% d = (0 1 -1)^T.
 
 %!test
-%! source matlab_introduction/01.03.2018/exercise_18.m;
+%! A = [4 -2 -10; 2 10 -12; -4 -6 16];
+%! b = [-10; 32; -16];
+%! x = A \ b;
 %!
 %! assert(
-%!   D,
-%!   [
-%!     3  0 -1  0  0  0;
-%!     0  3  0 -1  0  0;
-%!    -1  0  3  0 -1  0;
-%!     0 -1  0  3  0 -1;
-%!     0  0 -1  0  3  0;
-%!     0  0  0 -1  0  3;
-%!   ]
-%! );
-
-%!test
-%! source matlab_introduction/01.03.2018/exercise_18.m;
-%! % Note: We use that D is symmetric. Another options for transposing is the 'transpose' function.
-%! assert(D', D);
-
-invD = inv(D);
+%!   x,
+%!   [2; 4; 1],
+%!   1e-10
+%! )
+%!
+%! C = [1 1 -1; 2 1 1; 1 0 3];
+%! d = [0; 1; 1];
+%! y = inv(C) * d;
+%!
+%! assert(
+%!   y,
+%!   [1; -1; 0],
+%!   1e-10
+%! )

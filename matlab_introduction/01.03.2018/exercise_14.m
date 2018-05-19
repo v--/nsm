@@ -1,53 +1,18 @@
-% Construct the matrix
-%     /  11   12   13   14  \
-% C = |  21   22   23   24  |.
-%     |  31   32   33   34  |
-%     \  41   42   43   44  /
-%
-% Extract the main diagonal, the vector [13; 24] and the number 41 from C
-
-C = [11:14; 21:24; 31:34; 41:44];
+% Use the triu and tril functions to construct the matrix
+%     /  1    0    0   -1  \
+% P = |  1    1    0    0  |.
+%     |  1    1    1    0  |
+%     \  1    1    1    1  /
 
 %!test
-%! source matlab_introduction/01.03.2018/exercise_14.m;
+%! P = tril(ones(4)) + triu(-ones(4), 3);
 %!
 %! assert(
-%!   C,
+%!   P,
 %!   [
-%!     11 12 13 14;
-%!     21 22 23 24;
-%!     31 32 33 34;
-%!     41 42 43 44;
+%!     1  0  0 -1;
+%!     1  1  0  0;
+%!     1  1  1  0;
+%!     1  1  1  1;
 %!   ]
 %! );
-
-d = diag(C);
-
-%!test
-%! source matlab_introduction/01.03.2018/exercise_14.m;
-%!
-%! assert(
-%!   d,
-%!   [11; 22; 33; 44]
-%! );
-
-x = diag(C, 2);
-
-%!test
-%! source matlab_introduction/01.03.2018/exercise_14.m;
-%!
-%! assert(
-%!   x,
-%!   [13; 24]
-%! );
-
-y = diag(C, -3);
-
-%!test
-%! source matlab_introduction/01.03.2018/exercise_14.m;
-%!
-%! assert(
-%!   y,
-%!   41
-%! );
-

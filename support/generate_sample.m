@@ -1,5 +1,5 @@
 function[sample] = generate_sample(prgn_next, n, seed)
-    sample = zeros(n, 1);
+    sample = zeros(1, n);
     i = length(seed);
     sample(1:i) = seed;
 

@@ -1,4 +1,4 @@
-function[s] = heron(a, b, c)
+function[s] = herons_formula(a, b, c)
     if !(a > 0 & b > 0 & c > 0)
         error 'The sides of a triangle must be positive'
     end
@@ -8,9 +8,6 @@ function[s] = heron(a, b, c)
 end
 
 %!test
-%! source support/assert_throws.m;
-%! source matlab_introduction/15.03.2018/herons_formula.m;
-%!
-%! assert(heron(3, 4, 5), 6);
-%! assert(heron(6, 8, 10), 24);
-%! assert_throws(@heron, -3, 4, 5);
+%! assert(herons_formula(3, 4, 5), 6);
+%! assert(herons_formula(6, 8, 10), 24);
+%! assert_throws(@herons_formula, -3, 4, 5);

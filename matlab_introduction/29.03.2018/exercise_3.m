@@ -1,7 +1,6 @@
 % Plot the histograms of x (from exercise 2), y = 1000 iid Uniform(5, 15) and y^2 / x side by side.
 
-source matlab_introduction/29.03.2018/exercise_2.m;
-
+x = 100 + 5 * randn(1000, 1);
 n = 1000;
 
 hold on;

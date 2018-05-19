@@ -1,9 +1,7 @@
 % Construct a square matrix of zeros of order 3.
 
-M = zeros(3);
-
 %!test
-%! source matlab_introduction/01.03.2018/exercise_5.m;
+%! M = zeros(3);
 %!
 %! assert(
 %!   M,

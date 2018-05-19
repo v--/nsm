@@ -1,17 +1,3 @@
-% Construct a matrix by adding 1 to each element of A from exercise 1.
+% Generate a U(0, 1) random 4x5 matrix.
 
-source matlab_introduction/01.03.2018/exercise_1.m;
-
-B = A + ones(3);
-
-%!test
-%! source matlab_introduction/01.03.2018/exercise_9.m;
-%!
-%! assert(
-%!   B,
-%!   [
-%!     2   9   4;
-%!     4  11   8;
-%!     6   7  10;
-%!   ]
-%! );
+M = rand(4, 5);

@@ -1,9 +1,7 @@
 % Construct a 2x3 matrix of ones.
 
-M = zeros(2, 3);
-
 %!test
-%! source matlab_introduction/01.03.2018/exercise_4.m;
+%! M = zeros(2, 3);
 %!
 %! assert(
 %!   M,

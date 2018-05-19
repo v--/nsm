@@ -1,9 +1,8 @@
 % Construct a vector with all multiples of 0.2 between and including 0 and 1.
 
-x = 0:0.2:1;
 
 %!test
-%! source matlab_introduction/01.03.2018/exercise_8.m;
+%! x = 0:0.2:1;
 %!
 %! assert(
 %!   0:0.2:1,
