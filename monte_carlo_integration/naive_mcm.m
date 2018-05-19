@@ -3,7 +3,7 @@ function[result] = naive_mcm(fun, a, b, n)
     y = 0;
 
     for i = 1:n
-        x = a + rand(dim, 1) .* (b - a);
+        x = a + rand(1, dim) .* (b - a);
         y += fun(x) * prod(b - a) / n;
     end
 
@@ -11,13 +11,5 @@ function[result] = naive_mcm(fun, a, b, n)
 end
 
 %!test
-%! result = naive_mcm(@(x) 1/sqrt(x), 0, 1, 1e4);
-%! assert(result, 2, 0.1);
-
-%!test
-%! result = naive_mcm(@(x) e^(-x), 0, 1, 1e3);
-%! assert(result, 1 - 1/e, 0.1);
-
-%!test
-%! result = naive_mcm(@(x) prod(x), [0; 0], [1; 1], 1e3);
-%! assert(result, 1/4, 0.1);
+%! result = naive_mcm(@prod, zeros(1, 3), ones(1, 3), 1e3);
+%! assert(result, 1/8, 1e-2);

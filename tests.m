@@ -42,5 +42,12 @@ test pseudorandom_generators/multiplicative_fibonacci_generator;
 addpath('continuous_sampling')
 test continuous_sampling/uniform_rejection_sampling;
 
+addpath('quasirandom_sequences')
+test quasirandom_sequences/van_der_corput_sequence;
+test quasirandom_sequences/halton_sequence;
+
 addpath('monte_carlo_integration')
 test monte_carlo_integration/naive_mcm;
+test monte_carlo_integration/naive_qmcm;
+test monte_carlo_integration/symmetric_exp_mcm;
+test monte_carlo_integration/symmetric_exp_qmcm;
