@@ -1,5 +1,5 @@
-% Use the uniform distribution with density g(y) = 1 to simulate another continuous distribution
-function[sample] = uniform_rejection_sampling(n, density)
+% Use the uniform distribution with pdf g(y) = 1 to simulate another continuous distribution
+function[sample] = uniform_rejection_sampling(n, pdf)
     sample = zeros(n, 1);
     index = 1;
 
@@ -7,7 +7,7 @@ function[sample] = uniform_rejection_sampling(n, density)
         y = rand(1);
         u = rand(1);
 
-        if u <= density(y)
+        if u <= pdf(y)
             sample(index) = y;
             index++;
         end

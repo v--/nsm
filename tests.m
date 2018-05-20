@@ -39,6 +39,9 @@ test pseudorandom_generators/linear_feedback_shift_generator;
 test pseudorandom_generators/additive_fibonacci_generator;
 test pseudorandom_generators/multiplicative_fibonacci_generator;
 
+addpath('discrete_sampling')
+test discrete_sampling/naive_discrete_sampling;
+
 addpath('continuous_sampling')
 test continuous_sampling/uniform_rejection_sampling;
 
