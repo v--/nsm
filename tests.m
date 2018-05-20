@@ -49,5 +49,5 @@ test quasirandom_sequences/halton_sequence;
 addpath('monte_carlo_integration')
 test monte_carlo_integration/naive_mcm;
 test monte_carlo_integration/naive_qmcm;
-test monte_carlo_integration/symmetric_exp_mcm;
-test monte_carlo_integration/symmetric_exp_qmcm;
+test monte_carlo_integration/symmetric_mcm;
+test monte_carlo_integration/symmetric_qmcm;
