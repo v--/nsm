@@ -39,15 +39,16 @@ test pseudorandom_generators/linear_feedback_shift_generator;
 test pseudorandom_generators/additive_fibonacci_generator;
 test pseudorandom_generators/multiplicative_fibonacci_generator;
 
-addpath('discrete_sampling')
-test discrete_sampling/naive_discrete_sampling;
-test discrete_sampling/naive_discrete_uniform_sampling;
-test discrete_sampling/choice_without_return_sampling;
-test discrete_sampling/modified_choice_without_return_sampling;
-test discrete_sampling/choice_with_return_sampling;
+addpath('discrete_rv_simulation')
+test discrete_rv_simulation/naive_discrete_simulation;
+test discrete_rv_simulation/naive_discrete_uniform_simulation;
+test discrete_rv_simulation/choice_without_return_simulation;
+test discrete_rv_simulation/modified_choice_without_return_simulation;
+test discrete_rv_simulation/choice_with_return_simulation;
 
-addpath('continuous_sampling')
-test continuous_sampling/uniform_rejection_sampling;
+addpath('continuous_rv_simulation')
+test continuous_rv_simulation/rejection_simulation;
+test continuous_rv_simulation/inverse_function_simulation;
 
 addpath('quasirandom_sequences')
 test quasirandom_sequences/van_der_corput_sequence;

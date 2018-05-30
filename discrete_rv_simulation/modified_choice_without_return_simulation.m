@@ -1,5 +1,5 @@
 % This is a modification of the 'choice_without_return' algorithm that only samples a subset of all possible values and sacrifices some uniformity.
-function[sample] = modified_choice_without_return_sampling(n, max_value)
+function[sample] = modified_choice_without_return_simulation(n, max_value)
     B = zeros(1, n);
     sample = zeros(1, n);
 
@@ -25,5 +25,5 @@ end
 %!test
 %! n = 100;
 %! N = n * 10;
-%! sample = modified_choice_without_return_sampling(n, N);
+%! sample = modified_choice_without_return_simulation(n, N);
 %! assert(is_uniform(sample / N, 1e-3));

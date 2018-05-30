@@ -1,6 +1,6 @@
 % The goal is to simulate a uniform discrete random variable.
 % It basically shuffles the numbers in a certain interval so uniformity is guaranteed, even for small samples.
-function[sample] = choice_without_return_sampling(n)
+function[sample] = choice_without_return_simulation(n)
     A = 1:n;
     sample = zeros(1, n);
 
@@ -13,5 +13,5 @@ end
 
 %!test
 %! n = 60;
-%! sample = choice_without_return_sampling(n);
+%! sample = choice_without_return_simulation(n);
 %! assert(is_uniform(sample / n, 1e-3));
