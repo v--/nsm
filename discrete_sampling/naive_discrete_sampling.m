@@ -22,4 +22,4 @@ end
 %! n = 4;
 %! p = 1/2;
 %! sample = naive_discrete_sampling(100, @(m) binopdf(m - 1, n, p)) - 1;
-%! assert(is_uniform(binocdf(sample, n, p), 0.01, unique(binopdf(0:n, n, p))));
+%! assert(is_uniform(binocdf(sample, n, p), 1e-3));
