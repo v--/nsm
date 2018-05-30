@@ -1,4 +1,3 @@
-
 function[sample] = naive_discrete_sampling(n, prob_sequence)
     sample = zeros(n, 1);
     index = 1;

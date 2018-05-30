@@ -41,6 +41,10 @@ test pseudorandom_generators/multiplicative_fibonacci_generator;
 
 addpath('discrete_sampling')
 test discrete_sampling/naive_discrete_sampling;
+test discrete_sampling/naive_discrete_uniform_sampling;
+test discrete_sampling/choice_without_return_sampling;
+test discrete_sampling/modified_choice_without_return_sampling;
+test discrete_sampling/choice_with_return_sampling;
 
 addpath('continuous_sampling')
 test continuous_sampling/uniform_rejection_sampling;
