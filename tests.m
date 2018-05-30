@@ -49,6 +49,7 @@ test discrete_rv_simulation/choice_with_return_simulation;
 addpath('continuous_rv_simulation')
 test continuous_rv_simulation/inverse_function_simulation;
 test continuous_rv_simulation/rejection_simulation;
+test continuous_rv_simulation/box_muller_simulation;
 
 addpath('quasirandom_sequences')
 test quasirandom_sequences/van_der_corput_sequence;
