@@ -1,4 +1,4 @@
-% This is a modification of the 'choice_without_return' algorithm that only samples a subset of all possible values and sacrifices some uniformity.
+% This is a modification of the 'choice_without_return' algorithm that only samples a subset of all possible values while sacrificing some uniformity.
 function[sample] = modified_choice_without_return_simulation(n, max_value)
     B = zeros(1, n);
     sample = zeros(1, n);
