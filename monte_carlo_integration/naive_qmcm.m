@@ -14,3 +14,7 @@ end
 %!test
 %! result = naive_qmcm(@prod, zeros(1, 3), ones(1, 3), @halton_sequence, 1e2);
 %! assert(result, 1/8, 1e-2);
+
+%!test
+%! result = naive_qmcm(@prod, zeros(1, 3), ones(1, 3), @sobol_sequence, 1e2);
+%! assert(result, 1/8, 1e-2);
