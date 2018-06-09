@@ -1,6 +1,6 @@
 function[x] = faure_sequence(n, s)
     x = zeros(n, s);
-    base = next_prime(2*s);
+    base = next_prime(2*s); % The choice of this prime is pretty much arbitrary
 
     for i = 1:n
         expansion = power_expansion(i, base);
