@@ -18,3 +18,7 @@ end
 %!test
 %! result = symmetric_qmcm(@(x) e^x, 0, 1, @sobol_sequence, 1e2);
 %! assert(result, e - 1, 1e-2);
+
+%!test
+%! result = symmetric_qmcm(@(x) e^x, 0, 1, @faure_sequence, 1e2);
+%! assert(result, e - 1, 1e-2);

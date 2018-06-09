@@ -56,6 +56,7 @@ test quasirandom_sequences/weyl_sequence;
 test quasirandom_sequences/halton_sequence;
 test quasirandom_sequences/sobol_point;
 test quasirandom_sequences/sobol_sequence;
+test quasirandom_sequences/faure_sequence;
 
 addpath('monte_carlo_integration')
 test monte_carlo_integration/naive_mcm;
