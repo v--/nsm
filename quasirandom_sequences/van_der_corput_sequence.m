@@ -1,15 +1,6 @@
-function[x] = van_der_corput_sequence(n, b)
-    iters = floor(log(n) / log(b)) + 1;
-    dividends = 1:n;
-    A = [];
-
-    for i = 1:iters
-        remainders = rem(dividends, b);
-        dividends = (dividends - remainders) / b;
-        A = [A; remainders];
-    end
-
-    x = (1 / b) .^ (1:iters) * A;
+function[x] = van_der_corput_sequence(n, base)
+    expansion = power_expansion(1:n, base)';
+    x = (1 / base) .^ (1:size(expansion, 1)) * expansion;
 end
 
 %!test
