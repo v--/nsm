@@ -1,6 +1,6 @@
 function[x] = faure_sequence(n, s)
     x = zeros(n, s);
-    base = next_prime(s);
+    base = next_prime(2*s);
 
     for i = 1:n
         expansion = power_expansion(i, base);
@@ -14,7 +14,7 @@ function[x] = faure_sequence(n, s)
 end
 
 %!test
-%! assert(faure_sequence(16, 1), halton_sequence(16, 1), 1e-3);
+%! assert(faure_sequence(16, 1), halton_sequence(16, 2)(:, 2), 1e-3);
 
 %!test
 %! sequence = faure_sequence(100, 1);
