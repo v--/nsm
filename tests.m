@@ -54,6 +54,7 @@ test continuous_rv_simulation/box_muller_simulation;
 addpath('quasirandom_sequences')
 test quasirandom_sequences/weyl_sequence;
 test quasirandom_sequences/halton_sequence;
+test quasirandom_sequences/hammersley_point_set;
 test quasirandom_sequences/sobol_point;
 test quasirandom_sequences/sobol_sequence;
 test quasirandom_sequences/faure_sequence;
