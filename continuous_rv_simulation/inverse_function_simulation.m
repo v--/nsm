@@ -18,7 +18,7 @@ end
 %! assert(is_uniform(normcdf(sample), 1e-3));
 
 %!test
-%! n = 10;
+%! n = 20;
 %! p = 1/2;
 %! sample = inverse_function_simulation(100, @(k) binoinv(k, n, p));
 %! assert(is_uniform(binocdf(sample, n, p), 1e-3));
