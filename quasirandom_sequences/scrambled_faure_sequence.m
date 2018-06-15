@@ -1,6 +1,9 @@
 function[x] = scrambled_faure_sequence(n, s)
+    % -- scrambled_faure_sequence (N, S)
+    %     Use the generalized Faure sequence with uniform random matrix generated
+    %     for each point.
     x = zeros(n, s);
-    base = next_prime(2*s); % The choice of this prime is pretty much arbitrary
+    base = next_prime(2*s);
 
     for i = 1:n
         expansion = power_expansion(i, base);

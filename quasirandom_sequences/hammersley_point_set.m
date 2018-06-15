@@ -1,4 +1,7 @@
 function[x] = hammersley_point_set(n, s)
+    % -- hammersley_point_set (N, S)
+    %     Construct the s-dimensional Hammersley point set with an initial value
+    %     of 1/n for each row of the resulting matrix.
     x = zeros(n, s);
     p = 1;
 

@@ -1,5 +1,6 @@
 function[x] = faure_sequence(n, s)
-    x = zeros(n, s);
+    % -- faure_sequence (N, S)
+    %     Construct the s-dimensional Faure sequence.
     base = next_prime(2*s); % The choice of this prime is pretty much arbitrary
 
     for i = 1:n

@@ -1,14 +1,17 @@
 function[seq] = weyl_sequence(n, p)
-    seq = mod(p ./ (1:n), 1);
-end
+    % -- weyl_sequence (N, P)
+    %     Construct the a one-dimensional Weyl sequence by utilizing the fact
+    %     that the numbers 1/n_k, where n_k are prime, are linearly independent
+    %     as rational numbers.
+    x = zeros(1, n);
+    x(1) = 1;
 
-%!test
-%! sequence = weyl_sequence(10, 7);
-%! assert(
-%!   sequence,
-%!   [0, 1/2, 1/3, 3/4, 2/5, 1/6, 0, 7/8, 7/9, 7/10],
-%!   1e-3
-%! );
+    for k = 2:n
+        x(k) = next_prime(x(k - 1));
+    end
+
+    seq = mod(p ./ x, 1);
+end
 
 %!test
 %! sequence = weyl_sequence(100, m_primes(6));

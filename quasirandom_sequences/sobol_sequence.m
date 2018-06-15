@@ -1,4 +1,8 @@
 function[x] = sobol_sequence(n, s)
+    % -- sobol_sequence (N, S)
+    %     Construct the s-dimensional Sobol sequence by using the number
+    %     of the dimension as the degree of the corresponding primitive
+    %     polynomial.
     x = zeros(n, s);
 
     for i = 1:n

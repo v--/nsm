@@ -1,4 +1,7 @@
 function[x] = halton_sequence(n, s)
+    % -- faure_sequence (N, S)
+    %     Construct the s-dimensional Halton sequence with consecutive primes
+    %     for each dimension.
     x = zeros(n, s);
     p = 1;
 

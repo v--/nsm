@@ -1,8 +1,7 @@
 function[x] = sobol_point(n, d)
-    % -- X = sobol_point (N, D)
-    % Construct a single point of a Sobol-like sequence by using the binary
-    % expansion of N and a primitive polynomial of degree D over GF(2).
-
+    % -- sobol_point (N, D)
+    %     Construct a single point of the original Sobol sequence by using the
+    %     binary expansion of N and a primitive polynomial of degree D over GF(2).
     expansion = power_expansion(n, 2);
     w = length(expansion);
     % a is the vector of the non-leading coefficients
