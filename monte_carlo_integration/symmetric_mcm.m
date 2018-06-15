@@ -1,13 +1,11 @@
 function[result] = symmetric_mcm(fun, a, b, n)
     dim = length(a);
-    y = 0;
+    result = 0;
 
     for i = 1:n
         x = a + rand(1, dim) .* (b - a);
-        y += (fun(x) + fun(b - a - x)) * prod(b - a) / (2*n);
+        result += (fun(x) + fun(b - a - x)) * prod(b - a) / (2*n);
     end
-
-    result = y;
 end
 
 %!test

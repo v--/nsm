@@ -1,14 +1,12 @@
 function[result] = naive_qmcm(fun, a, b, sequence_generator, n)
     dim = length(a);
-    y = 0;
+    result = 0;
     r = sequence_generator(n, dim);
 
     for i = 1:n
         x = a + r(i, :) .* (b - a);
-        y += fun(x) * prod(b - a) / n;
+        result += fun(x) * prod(b - a) / n;
     end
-
-    result = y;
 end
 
 %!test
