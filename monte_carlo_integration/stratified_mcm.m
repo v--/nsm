@@ -23,5 +23,5 @@ function[result] = stratified_mcm(fun, a, b, n, m)
 end
 
 %!test
-%! result = stratified_mcm(@prod, zeros(1, 3), ones(1, 3), 1e3, 10);
+%! result = stratified_mcm(@prod, zeros(1, 3), ones(1, 3), 1e2, 10);
 %! assert(result, 1/8, 1e-2);
