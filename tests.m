@@ -28,6 +28,7 @@ test quasirandom_sequences/hammersley_point_set;
 test quasirandom_sequences/sobol_point;
 test quasirandom_sequences/sobol_sequence;
 test quasirandom_sequences/faure_sequence;
+test quasirandom_sequences/scrambled_faure_sequence;
 
 addpath('monte_carlo_integration')
 test monte_carlo_integration/naive_mcm;
