@@ -4,11 +4,12 @@ function[result] = naive_mcm(fun, a, b, n)
     %     using N iterations by evaluating FUN at a random point in the
     %     parallelotope at each iteration.
     dim = length(a);
+    dx = prod(b - a) / n;
     result = 0;
 
     for i = 1:n
         x = a + rand(1, dim) .* (b - a);
-        result += fun(x) * prod(b - a) / n;
+        result += fun(x) * dx;
     end
 end
 

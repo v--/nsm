@@ -4,12 +4,13 @@ function[result] = naive_qmcm(fun, a, b, sequence_generator, n)
     %     using a quasirandom sequence given by SEQUENCE_GENERATOR instead of
     %     using a pseudorandom generator.
     dim = length(a);
+    dx = prod(b - a) / n;
     result = 0;
     r = sequence_generator(n, dim);
 
     for i = 1:n
         x = a + r(i, :) .* (b - a);
-        result += fun(x) * prod(b - a) / n;
+        result += fun(x) * dx;
     end
 end
 
