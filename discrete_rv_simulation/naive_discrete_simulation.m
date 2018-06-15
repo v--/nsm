@@ -27,7 +27,7 @@ end
 
 % Binomial distribution
 %!test
-%! n = 4;
+%! n = 20;
 %! p = 1/2;
 %! sample = naive_discrete_simulation(100, @(m) binopdf(m, n, p), 0, @(n) n+1);
 %! assert(is_uniform(binocdf(sample, n, p), 1e-3));
