@@ -64,3 +64,4 @@ test monte_carlo_integration/naive_mcm;
 test monte_carlo_integration/naive_qmcm;
 test monte_carlo_integration/symmetric_mcm;
 test monte_carlo_integration/symmetric_qmcm;
+test monte_carlo_integration/stratified_mcm;
