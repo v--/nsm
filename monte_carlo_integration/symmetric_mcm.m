@@ -5,13 +5,7 @@ function[result] = symmetric_mcm(fun, a, b, n)
     %
     %     The goal of this algorithm is to reduce the variance of the underlying
     %     random variable.
-    dim = length(a);
-    result = 0;
-
-    for i = 1:n
-        x = a + rand(1, dim) .* (b - a);
-        result += (fun(x) + fun(b - a - x)) * prod(b - a) / (2*n);
-    end
+    result = naive_mcm(@(x) (fun(x) + fun(b - a - x)) / 2, a, b, n);
 end
 
 %!test
