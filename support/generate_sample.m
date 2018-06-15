@@ -1,4 +1,9 @@
 function[sample] = generate_sample(prgn_next, n, seed)
+    % -- generate_sample (PRGN_NEXT, N, SEED)
+    %     Construct a sequence of N pseudorandom numbers starting with the SEED
+    %     vector. PRGN_NEXT is first fed with the seed and then with it's last
+    %     output until the sample has at least N numbers. If the resulting sample
+    %     has more than N numbers, the remaining numbers are trimmed.
     sample = zeros(1, n);
     i = length(seed);
     sample(1:i) = seed;

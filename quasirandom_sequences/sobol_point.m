@@ -1,9 +1,12 @@
-% This is a slight twist on the traditional Sobol algorithm
 function[x] = sobol_point(n, d)
+    % -- X = sobol_point (N, D)
+    % Construct a single point of a Sobol-like sequence by using the binary
+    % expansion of N and a primitive polynomial of degree D over GF(2).
+
     expansion = power_expansion(n, 2);
     w = length(expansion);
     % a is the vector of the non-leading coefficients
-    a = gf2_primitive_polynomials(d);
+    a = gf2_primitive_polynomial(d);
     m = zeros(1, w);
 
     for i = 1:min(d, w)

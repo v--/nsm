@@ -1,5 +1,10 @@
 function[next] = linear_feedback_shift_generator(current, w)
-    next = mod(current' * w, 1);
+    % -- linear_feedback_shift_generator (CURRENT, W)
+    %     Produce a new pseudorandom number from the dot product of the CURRENT
+    %     seed (usually the previous N generated numbers) and some vector W.
+    %
+    %     Performance-wise, this is an insanely efficient generator.
+    next = mod(dot(current, w), 1);
 end
 
 %!test

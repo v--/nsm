@@ -1,4 +1,10 @@
 function[result] = symmetric_mcm(fun, a, b, n)
+    % -- symmetric_mcm (FUN, A, B, N)
+    %     Reuse each of the points in the naive Monte Carlo integration algorithm
+    %     by taking it's symmetric point about the center of [a, b].
+    %
+    %     The goal of this algorithm is to reduce the variance of the underlying
+    %     random variable.
     dim = length(a);
     result = 0;
 

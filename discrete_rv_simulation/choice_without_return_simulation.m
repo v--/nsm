@@ -1,6 +1,9 @@
-% The goal is to simulate a uniform discrete random variable.
-% It basically shuffles the numbers in a certain interval so uniformity is guaranteed, even for small samples.
 function[sample] = choice_without_return_simulation(n)
+    % -- choice_without_return_simulation (N)
+    %     Shuffle the numbers from 1 to N, i.e. produce N numbers from a uniform
+    %     discrete distribution with value 1 to N.
+    %
+    %     Uniformity is guaranteed, even for small samples.
     A = 1:n;
     sample = zeros(1, n);
 

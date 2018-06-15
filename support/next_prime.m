@@ -1,4 +1,7 @@
 function[prime] = next_prime(start)
+    % -- next_prime (START)
+    %     Find the smallest prime that is strictly larger than START.
+
     if start < 3
         prime = start + 1;
     else

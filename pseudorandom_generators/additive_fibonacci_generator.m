@@ -1,6 +1,10 @@
-% This generator also produces integers.
-
 function[next] = additive_fibonacci_generator(current, k)
+    % -- additive_fibonacci_generator (CURRENT, K)
+    %     Produce a new pseudorandom integer from the sum of the CURRENT
+    %     seed (usually the previous N generated numbers) modulo 2^k.
+    %
+    %     This generator is efficient performance-wise, but it is relatively
+    %     predictable.
     next = mod(sum(current), 2^k);
 end
 

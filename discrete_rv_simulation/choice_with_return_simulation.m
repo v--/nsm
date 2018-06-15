@@ -1,6 +1,10 @@
-% This is another algorithm for simulating uniform discrete random variables.
-% It avoids auxilary arrays at the cost of more calls to the underlying random generator.
 function[sample] = choice_with_return_simulation(n, max_value)
+    % -- choice_with_return_simulation (N, MAX_VALUE)
+    %     Simulate a discrete uniform random variable that takes values from 1
+    %     to MAX_VALUE.
+    %
+    %     Compared to the choice without return simulations, it avoids auxilary
+    %     arrays at the cost of more calls to the underlying random generator.
     sample = zeros(1, n);
 
     for i = 1:n

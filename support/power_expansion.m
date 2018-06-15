@@ -1,4 +1,8 @@
 function[d] = power_expansion(n, base)
+    % -- power_expansion (N, BASE)
+    %     Return a matrix where the i-th row corresponds to the BASE expansion
+    %     of N(i).
+
     if base <= 1
         error('The base must be a positive number strictly greater than 1.')
     end

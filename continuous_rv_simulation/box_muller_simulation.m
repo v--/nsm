@@ -1,4 +1,7 @@
 function[sample] = box_muller_simulation(n)
+    % -- box_muller_simulation (N)
+    %     Simulate N random variates from a standard normal distribution.
+    %     This is an efficient classical algorithm.
     sample = zeros(n, 1);
 
     for i = 1:2:n
