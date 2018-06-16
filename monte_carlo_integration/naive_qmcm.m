@@ -35,4 +35,4 @@ end
 % when used with a low number of iterations.
 %!test
 %! result = naive_qmcm(@prod, zeros(1, 3), ones(1, 3), @scrambled_faure_sequence, 1e2);
-%! assert(result, 1/8, 0.05);
+%! assert(result, 1/8, 0.025);

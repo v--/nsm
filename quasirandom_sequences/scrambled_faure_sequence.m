@@ -1,7 +1,11 @@
 function[x] = scrambled_faure_sequence(n, s)
     % -- scrambled_faure_sequence (N, S)
-    %     Use the generalized Faure sequence with uniform random matrix generated
-    %     for each point.
+    %     Use the generalized Faure sequence with a lower triangular matrix
+    %     of random integers, i.e. multiply Pascal's matrix in the classical
+    %     Faure sequence with a lower triangular m×m matrix containing random
+    %     integers from 1 to m.
+    %
+    %     The random matrix is different for each point of the resulting sequence.
     x = zeros(n, s);
     base = next_prime(2*s);
 
@@ -11,8 +15,8 @@ function[x] = scrambled_faure_sequence(n, s)
         inverse_powers = (1 / base) .^ (1:m);
 
         for j = 1:s
-            aux = tril(rand(m));
-            x(i, j) = mod(dot(inverse_powers, expansion * aux * pascal(m)^(j-1)), 1);
+            aux = tril(randi(m, m));
+            x(i, j) = dot(inverse_powers, mod(expansion * aux * pascal(m)^(j-1), base));
         end
     end
 end
