@@ -8,12 +8,16 @@ function[m, s] = symmetric_mcm(fun, a, b, n)
     %
     %     M is the approximate value of the integral and S is the estimated
     %     variance of the underlying random variable.
-    [m, s] = naive_mcm(@(x) (fun(x) + fun(b - a - x)) / 2, a, b, n);
+    [m, s] = naive_mcm(@(x) (fun(x) + fun(a + b - x)) / 2, a, b, n);
 end
 
 %!test
 %! result = symmetric_mcm(@exp, 0, 1, 1e3);
 %! assert(result, e - 1, 1e-2);
+
+%!test
+%! result = symmetric_mcm(@exp, 1, 2, 1e3);
+%! assert(result, e^2 - e, 1e-2);
 
 %!test
 %! [_, v1] = naive_mcm(@exp, 0, 1, 1e2, 10);
