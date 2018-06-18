@@ -1,36 +1,32 @@
-function[i, v] = stratified_mcm(fun, a, b, n, m)
-    % -- [I, V] = stratified_mcm (FUN, A, B, N, M)
+function[m, v] = stratified_mcm(fun, a, b, n, k)
+    % -- [M, V] = stratified_mcm (FUN, A, B, N, K)
     %     Use stratification to improve the convergence of Monte Carlo integration.
     %
     %     FUN is the integrand, A and B are the bounding vectors, N is the number
-    %     of iterations and M >= 2 is the strata count (the number of
-    %     subparallelotopes that the integration domain gets subdivided into.
+    %     of iterations and K >= 2 is the number of subinterval each dimension
+    %     gets subdivided into.
     %
-    %     I is the approximate value of the integral and V is the estimated
+    %     M is the approximate value of the integral and V is the estimated
     %     variance of the underlying random variable.
     dim = length(a);
-    i = 0;
+    m = 0;
     v = 0;
 
-    if mod(n, m) > 0
-        error('M must divide N.')
+    subdivisions = k^dim;
+
+    if mod(n, subdivisions) > 0
+        error('The total number of subdivisions (K^DIM, where DIM is the dimension of A) must divide N.')
     end
 
-    points_per_step = n / m;
-    dimension_subdivisions = round(m^(1/dim));
+    points_per_step = n / subdivisions;
+    directions = power_expansion(0:subdivisions - 1, k);
+    int_direction = (b - a) ./ k;
 
-    if dimension_subdivisions^dim ~= m
-        error('M must be an exact DIM-th root, where DIM is the of the dimension of A.')
-    end
-
-    directions = power_expansion(0:m - 1, dimension_subdivisions);
-    int_direction = (b - a) ./ dimension_subdivisions;
-
-    for k = 1:m
-        a_ = a + directions(k, :) .* int_direction;
+    for i = 1:subdivisions
+        a_ = a + directions(i, :) .* int_direction;
         b_ = a_ + int_direction;
-        [i_, v_] = naive_mcm(fun, a_, b_, points_per_step);
-        i += i_;
+        [m_, v_] = naive_mcm(fun, a_, b_, points_per_step);
+        m += m_;
         v += v_;
     end
 end
@@ -40,7 +36,7 @@ end
 %! assert(result, e - 1, 0.02);
 
 %!test
-%! result = stratified_mcm(@prod, [0 0], [1 1], 1e2, 4);
+%! result = stratified_mcm(@prod, [0 0], [1 1], 1e2, 2);
 %! assert(result, 1/4, 0.05);
 
 % Verify that the variance is inversely proportional to the strata count
