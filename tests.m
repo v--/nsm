@@ -1,6 +1,9 @@
 pkg load statistics
 
 addpath('support')
+test support/power_expansion;
+test support/integrate;
+
 addpath('pseudorandom_generators')
 test pseudorandom_generators/naive_generator;
 test pseudorandom_generators/von_neumann_generator;
@@ -32,6 +35,6 @@ test quasirandom_sequences/scrambled_faure_sequence;
 
 addpath('monte_carlo_integration')
 test monte_carlo_integration/naive_mcm;
-test monte_carlo_integration/naive_qmcm;
 test monte_carlo_integration/symmetric_mcm;
 test monte_carlo_integration/stratified_mcm;
+test monte_carlo_integration/quasi_mcm;
