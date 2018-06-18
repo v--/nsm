@@ -23,9 +23,3 @@ end
 %!test
 %! result = quasi_mcm(@exp, 0, 1, 1e2, @faure_sequence);
 %! assert(result, e - 1, 0.02);
-
-% This is technically a nice sequence but the nondeterminism makes it bad when
-% used with a low number of iterations.
-%!test
-%! result = quasi_mcm(@exp, 0, 1, 1e2, @scrambled_faure_sequence);
-%! assert(result, e - 1, 0.2);
